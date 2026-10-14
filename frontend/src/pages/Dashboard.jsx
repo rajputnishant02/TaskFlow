@@ -7,7 +7,7 @@ const Dashboard = () => {
     const [issues, setIssues] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const projectId = "6ab92a04e64ad59b9007aede";
+    // const projectId = "6ab92a04e64ad59b9007aede";
 
     const fetchIssues = async () => {
         try {
