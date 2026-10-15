@@ -11,6 +11,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use((req, res, next) => {
+    console.log("Incoming request:", req.method, req.originalUrl);
+    next();
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes)
 app.use("/api/issues", issueRoutes)
