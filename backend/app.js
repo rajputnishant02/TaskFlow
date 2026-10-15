@@ -23,4 +23,11 @@ app.get("/api/health", (req, res) => {
     });
 });
 
+app.use((err, req, res, next) => {
+    console.error("API Error:", err);
+    res.status(500).json({
+        message: "Internal server error"
+    });
+});
+
 module.exports = app;
